@@ -5,10 +5,12 @@ The questions have been taken from various sources and the difficulty level can 
 
 **The questions can be divided into various subtopics.**
 
-#### Conditionals and Loops
+### Conditionals and Loops
+[Fibonacci](https://github.com/karanmalh0tra/python-coding/tree/master/NthFibonacciNumber) To find the Nth number in the fibonacci list
 
+[Reverse of a Number](https://github.com/karanmalh0tra/python-coding/tree/master/ReverseOfANumber) has the solution to reverse a number.
 
-#### Patterns
+### Patterns
 
 [Pyramid Number Pattern](https://github.com/karanmalh0tra/python-coding/tree/master/PyramidNumberPattern) are numbers in the shape of a Pyramid.
 
@@ -18,7 +20,7 @@ The questions have been taken from various sources and the difficulty level can 
 
 [Zeros and Stars Pattern](https://github.com/karanmalh0tra/python-coding/tree/master/ZerosAndStarsPattern) are where you might need to think a tad bit harder than the usual patterns.
 
-#### Searching and Sorting
+### Searching and Sorting
 [Binary Search](https://github.com/karanmalh0tra/python-coding/tree/master/BinarySearch) is one of the most commonly used search algorithm which needs a sorted array to perform the search algorithm.
 
 [Bubble Sort](https://github.com/karanmalh0tra/python-coding/tree/master/BubbleSort) puts the largest element at the end in each round of sort that it performs.
@@ -28,7 +30,7 @@ The questions have been taken from various sources and the difficulty level can 
 [Merge Two Sorted Arrays](https://github.com/karanmalh0tra/python-coding/tree/master/MergeTwoSortedArrays) can be solved by using the fundamentals of sorting algorithms.
 
 
-#### Strings
+### Strings
 
 
-#### Two-Dimensional Lists
+### Two-Dimensional Lists
