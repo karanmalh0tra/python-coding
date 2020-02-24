@@ -25,9 +25,17 @@ The questions have been taken from various sources and the difficulty level can 
 
 [Bubble Sort](https://github.com/karanmalh0tra/python-coding/tree/master/BubbleSort) puts the largest element at the end in each round of sort that it performs.
 
-[Insertion Sort](https://github.com/karanmalh0tra/python-coding/tree/master/InsertionSort) keeps putting an element from the unsorted list to the sorted list. 
+[Insertion Sort](https://github.com/karanmalh0tra/python-coding/tree/master/InsertionSort) keeps putting an element from the unsorted list to the sorted list.
 
 [Merge Two Sorted Arrays](https://github.com/karanmalh0tra/python-coding/tree/master/MergeTwoSortedArrays) can be solved by using the fundamentals of sorting algorithms.
+
+[PushZerosToEnd](https://github.com/karanmalh0tra/python-coding/tree/master/PushZerosToEnd) requires you to push the zeros present in the array towards the end without using an extra array to do so.
+
+[RotateArray](https://github.com/karanmalh0tra/python-coding/tree/master/RotateArray) Shift the array to the left by the number entered by the user.
+
+[Sort012](https://github.com/karanmalh0tra/python-coding/tree/master/Sort012) Sort an array consisting of 0s 1s and 2s in only one scan and on the same array.
+
+[SumOfTwoArrays](https://github.com/karanmalh0tra/python-coding/tree/master/SumOfTwoArrays) is the actual addition of units, tenths, hundreds places of an array.
 
 
 ### Strings
