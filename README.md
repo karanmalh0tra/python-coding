@@ -42,3 +42,8 @@ The questions have been taken from various sources and the difficulty level can 
 
 
 ### Two-Dimensional Lists
+
+
+### Recursions
+
+[PowerOfANumber](https://github.com/karanmalh0tra/python-coding/tree/master/PowerOfANumber) finds the power of a number through recursion.
