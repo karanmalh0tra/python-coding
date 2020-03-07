@@ -47,3 +47,7 @@ The questions have been taken from various sources and the difficulty level can 
 ### Recursions
 
 [PowerOfANumber](https://github.com/karanmalh0tra/python-coding/tree/master/PowerOfANumber) finds the power of a number through recursion.
+
+[isListSorted](https://github.com/karanmalh0tra/python-coding/tree/master/isListSorted) checks if the list is sorted or not via recursion.
+
+[RemoveDuplicatesRecursively](https://github.com/karanmalh0tra/python-coding/tree/master/RemoveDuplicatesRecursively) removes all the duplicates in a string and replaces them with only one instance of it via recursion.
