@@ -37,6 +37,7 @@ The questions have been taken from various sources and the difficulty level can 
 
 [SumOfTwoArrays](https://github.com/karanmalh0tra/python-coding/tree/master/SumOfTwoArrays) is the actual addition of units, tenths, hundreds places of an array.
 
+[Merge Sort](https://github.com/karanmalh0tra/python-coding/tree/master/MergeSort) sorts the array via recursion and is faster than Bubble Sort and Insertion Sort. Since Recursion is used, the same code will be present under Recursion topic as well.
 
 ### Strings
 
@@ -51,3 +52,5 @@ The questions have been taken from various sources and the difficulty level can 
 [isListSorted](https://github.com/karanmalh0tra/python-coding/tree/master/isListSorted) checks if the list is sorted or not via recursion.
 
 [RemoveDuplicatesRecursively](https://github.com/karanmalh0tra/python-coding/tree/master/RemoveDuplicatesRecursively) removes all the duplicates in a string and replaces them with only one instance of it via recursion.
+
+[Merge Sort](https://github.com/karanmalh0tra/python-coding/tree/master/MergeSort) sorts the array via recursion and is faster than Bubble Sort and Insertion Sort. Since this is a sorting algorithm, the same code will be present under Searching and Sorting topic as well.
