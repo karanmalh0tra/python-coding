@@ -39,6 +39,8 @@ The questions have been taken from various sources and the difficulty level can 
 
 [Merge Sort](https://github.com/karanmalh0tra/python-coding/tree/master/MergeSort) sorts the array via recursion and is faster than Bubble Sort and Insertion Sort. Since Recursion is used, the same code will be present under Recursion topic as well.
 
+[Quick Sort](https://github.com/karanmalh0tra/python-coding/tree/master/QuickSort) sorts the array via recursion and is faster than Bubble Sort and Insertion Sort. It uses lesser space than Merge Sort. Since Recursion is used, the same code will be present under Recursion topic as well.
+
 ### Strings
 
 
@@ -54,3 +56,7 @@ The questions have been taken from various sources and the difficulty level can 
 [RemoveDuplicatesRecursively](https://github.com/karanmalh0tra/python-coding/tree/master/RemoveDuplicatesRecursively) removes all the duplicates in a string and replaces them with only one instance of it via recursion.
 
 [Merge Sort](https://github.com/karanmalh0tra/python-coding/tree/master/MergeSort) sorts the array via recursion and is faster than Bubble Sort and Insertion Sort. Since this is a sorting algorithm, the same code will be present under Searching and Sorting topic as well.
+
+[Quick Sort](https://github.com/karanmalh0tra/python-coding/tree/master/QuickSort) sorts the array via recursion and is faster than Bubble Sort and Insertion Sort. It uses lesser space than Merge Sort. Since this is a sorting algorithm, the same code will be present under Searching and Sorting topic as well.
+
+[Tower of Hanoi](https://github.com/karanmalh0tra/python-coding/tree/master/TowerOfHanoi) is difficult to understand but easy to implement via recursion.
