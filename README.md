@@ -25,7 +25,7 @@ The questions have been taken from various sources and the difficulty level can 
 
 [Bubble Sort](https://github.com/karanmalh0tra/python-coding/tree/master/BubbleSort) puts the largest element at the end in each round of sort that it performs.
 
-[Selection Sort] (https://github.com/karanmalh0tra/python-coding/tree/master/SelectionSort) finds the minimum element from the unsorted part and puts it in the sorted part.
+[Selection Sort](https://github.com/karanmalh0tra/python-coding/tree/master/SelectionSort) finds the minimum element from the unsorted part and puts it in the sorted part.
 
 [Insertion Sort](https://github.com/karanmalh0tra/python-coding/tree/master/InsertionSort) keeps putting an element from the unsorted list to the sorted list.
 
