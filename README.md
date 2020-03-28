@@ -43,11 +43,6 @@ The questions have been taken from various sources and the difficulty level can 
 
 [Quick Sort](https://github.com/karanmalh0tra/python-coding/tree/master/QuickSort) sorts the array via recursion and is faster than Bubble Sort and Insertion Sort. It uses lesser space than Merge Sort. Since Recursion is used, the same code will be present under Recursion topic as well.
 
-### Strings
-
-
-### Two-Dimensional Lists
-
 
 ### Recursions
 
@@ -62,3 +57,8 @@ The questions have been taken from various sources and the difficulty level can 
 [Quick Sort](https://github.com/karanmalh0tra/python-coding/tree/master/QuickSort) sorts the array via recursion and is faster than Bubble Sort and Insertion Sort. It uses lesser space than Merge Sort. Since this is a sorting algorithm, the same code will be present under Searching and Sorting topic as well.
 
 [Tower of Hanoi](https://github.com/karanmalh0tra/python-coding/tree/master/TowerOfHanoi) is difficult to understand but easy to implement via recursion.
+
+
+### Time Complexities in minIndex
+
+[Intersection of Two Arrays](https://github.com/karanmalh0tra/python-coding/tree/master/IntersectonOfTwoArrays) where the intersection of two unsorted arrays are printed keeping time complexity in mind. Brute Force => O(n^2). This solution => O(n* log n)
