@@ -59,6 +59,8 @@ The questions have been taken from various sources and the difficulty level can 
 [Tower of Hanoi](https://github.com/karanmalh0tra/python-coding/tree/master/TowerOfHanoi) is difficult to understand but easy to implement via recursion.
 
 
-### Time Complexities in minIndex
+### Time Complexities
 
 [Intersection of Two Arrays](https://github.com/karanmalh0tra/python-coding/tree/master/IntersectonOfTwoArrays) where the intersection of two unsorted arrays are printed keeping time complexity in mind. Brute Force => O(n^2). This solution => O(n* log n)
+
+[Equilibrium Index](https://github.com/karanmalh0tra/python-coding/tree/master/ArrayEquilibriumIndex) returns the index of the array from where the left part and the right part of the array is equal. Brute Force => O(n^2). This solution => O(n)
