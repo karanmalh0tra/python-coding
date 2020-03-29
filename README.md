@@ -66,3 +66,7 @@ The questions have been taken from various sources and the difficulty level can 
 [Equilibrium Index](https://github.com/karanmalh0tra/python-coding/tree/master/ArrayEquilibriumIndex) returns the index of the array from where the left part and the right part of the array is equal. Brute Force => O(n^2). This solution => O(n)
 
 [Pair Sum In Array](https://github.com/karanmalh0tra/python-coding/tree/master/PairSumInArray) returns the pair of numbers in array that sum up to the input provided. Brute Force => O(n^2). This solution Ideal => O(n). Worst Case => O(n^2). The worst case is only because the problem statement asks us to repeat the output multiple times. For only one pair of similar numbers, using dictionary would help solve this in O(n).
+
+### Linked List
+
+[Implementation of Linked List](https://github.com/karanmalh0tra/python-coding/tree/master/LinkedListImplementation) has the code to implement a linked list. Ask the user for input in a single line and also print the linked list.
