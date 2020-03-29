@@ -64,3 +64,5 @@ The questions have been taken from various sources and the difficulty level can 
 [Intersection of Two Arrays](https://github.com/karanmalh0tra/python-coding/tree/master/IntersectonOfTwoArrays) where the intersection of two unsorted arrays are printed keeping time complexity in mind. Brute Force => O(n^2). This solution => O(n* log n)
 
 [Equilibrium Index](https://github.com/karanmalh0tra/python-coding/tree/master/ArrayEquilibriumIndex) returns the index of the array from where the left part and the right part of the array is equal. Brute Force => O(n^2). This solution => O(n)
+
+[Pair Sum In Array](https://github.com/karanmalh0tra/python-coding/tree/master/PairSumInArray) returns the pair of numbers in array that sum up to the input provided. Brute Force => O(n^2). This solution Ideal => O(n). Worst Case => O(n^2). The worst case is only because the problem statement asks us to repeat the output multiple times. For only one pair of similar numbers, using dictionary would help solve this in O(n).
