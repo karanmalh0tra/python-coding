@@ -10,6 +10,24 @@ def length(head):
         head = head.next
     return count
 
+def delete(head, i):
+    #############################
+    if i < 0 or i >= length(head):
+        return head
+    prev = None
+    curr = head
+    count = 0
+    while count < i:
+        prev = curr
+        curr = curr.next
+        count = count + 1
+    if prev is not None:
+        prev.next = curr.next
+        curr.next = None
+    else:
+        head = curr.next
+    return head
+
 def insertAtI(head,i,data):
     if i < 0 or i > length(head):
         return head
@@ -55,4 +73,6 @@ head = takeInput()
 printLL(head)
 head = insertAtI(head,2,6)
 head = insertAtI(head,0,9)
+printLL(head)
+head = delete(head,0)
 printLL(head)
