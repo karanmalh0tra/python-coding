@@ -47,6 +47,30 @@ def insertAtI(head,i,data):
 
     return head
 
+def insertAtIRecursively(head,i,data):
+    if i == 0:
+        newNode = Node(data)
+        newNode.next = head
+        return newNode
+
+    if head is None: #should be below i == 0  condition.
+        return None
+
+    smallHead = insertAtIRecursively(head.next,i-1,data)
+    head.next = smallHead
+    return head
+
+def deleteRecursively(head, i):
+    if i == 0:
+        head = head.next
+        return head
+
+    if head.next is None:
+        return head
+
+    head.next = deleteRecursively(head.next,i-1)
+    return head
+
 def takeInput():
     inputList = [int(ele) for ele in input().split()]
     head = None
