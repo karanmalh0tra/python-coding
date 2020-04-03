@@ -67,6 +67,8 @@ The questions have been taken from various sources and the difficulty level can 
 
 [Pair Sum In Array](https://github.com/karanmalh0tra/python-coding/tree/master/PairSumInArray) returns the pair of numbers in array that sum up to the input provided. Brute Force => O(n^2). This solution Ideal => O(n). Worst Case => O(n^2). The worst case is only because the problem statement asks us to repeat the output multiple times. For only one pair of similar numbers, using dictionary would help solve this in O(n).
 
+[Triplet Sum](https://github.com/karanmalh0tra/python-coding/tree/master/TripletSum) returns the pair of numbers in array that sum up to the input provided. Brute Force => O(n^3). This solution Ideal => O(n^2). Worst Case => O(n^3). The worst case is only because the problem statement asks us to repeat the output multiple times. For only one triplet of similar numbers, using dictionary would help solve this in O(n^2).
+
 ### Linked List
 
 [Implementation of Linked List](https://github.com/karanmalh0tra/python-coding/tree/master/LinkedListImplementation) has the code to implement a linked list. Ask the user for input in a single line and also print the linked list.
