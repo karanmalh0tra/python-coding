@@ -16,6 +16,19 @@ def reverseRecursive(head):
     return smallhead
     #############################
 
+def reverse(head):
+    #  Given a linked list, reverse it iteratively.
+    #############################
+    curr = head
+    prev = None
+    #############################
+    while curr is not None:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+    return prev
+
 def ll(arr):
     if len(arr)==0:
         return None
