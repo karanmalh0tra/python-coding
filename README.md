@@ -74,4 +74,6 @@ The questions have been taken from various sources and the difficulty level can 
 [Implementation of Linked List](https://github.com/karanmalh0tra/python-coding/tree/master/LinkedListImplementation) has the code to implement a linked list. Ask the user for input in a single line and also print the linked list.
 
 ### Stack
-[Implementation of Stack](https://github.com/karanmalh0tra/python-coding/tree/master/StackImplementation) has the code to implement stack using Array. The functionalities of stack that are included here are push, pop, top, size and isEmpty.
+
+[Implementation of Stack](https://github.com/karanmalh0tra/python-coding/tree/master/StackImplementation) has the code to implement stack using Array and LinkedList. The functionalities of stack that are included here are push, pop, top, size and isEmpty.
+Other coding questions that utilise stack implementation would also be present in here.
