@@ -1,23 +1,34 @@
-
 import queue
 class StackUsingQueues:
 
     def __init__(self):
         self.q1 = queue.Queue()
         self.q2 = queue.Queue()
+        self.currentsize = 0
 
 
     def push(self,data):
-        pass
+        self.q1.put(data)
+        self.currentsize  += 1
 
     def pop(self):
-        pass
+        if self.q1.qsize() == 0:
+            return -1
+        while self.q1.qsize() > 1:
+            self.q2.put(self.q1.get())
+        element = self.q1.get()
+        self.q1, self.q2 = self.q2, self.q1
+        self.currentsize -= 1
+        return element
 
     def top(self):
-        pass
+        if self.q1.qsize() == 0:
+            return -1
+        length = self.q1.qsize()
+        return self.q1.queue[length-1]
 
     def getSize(self):
-        pass
+        return self.currentsize
 
 s = StackUsingQueues()
 li = [int(ele) for ele in input().split()]
@@ -46,5 +57,4 @@ while i<len(li):
     elif choice == 5:
         while s.q1.qsize() !=0:
             print(s.q1.get(),end=' ')
-
     i+=1
