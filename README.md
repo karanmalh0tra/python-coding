@@ -77,3 +77,7 @@ The questions have been taken from various sources and the difficulty level can 
 
 [Implementation of Stack](https://github.com/karanmalh0tra/python-coding/tree/master/StackImplementation) has the code to implement stack using Array and LinkedList. The functionalities of stack that are included here are push, pop, top, size and isEmpty.
 Other coding questions that utilise stack implementation would also be present in here.
+
+### Queue
+
+[Implementation of Queue](https://github.com/karanmalh0tra/python-coding/tree/master/QueueImplementation) has the code to implement queue using Array. The functionalities of queue that are included here are enqueue, dequeue, front, size and isEmpty.
