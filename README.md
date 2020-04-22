@@ -81,3 +81,7 @@ Other coding questions that utilise stack implementation would also be present i
 ### Queue
 
 [Implementation of Queue](https://github.com/karanmalh0tra/python-coding/tree/master/QueueImplementation) has the code to implement queue using Array and Linked List. The functionalities of queue that are included here are enqueue, dequeue, front, size and isEmpty.
+
+### Binary Trees
+
+[Implementation of Binary Trees](https://github.com/karanmalh0tra/python-coding/tree/master/BinaryTreeImplementation) has the code to implement binary trees. Most of the tree problems are to be solved via recursion since a tree always consist of nodes that are trees themselves. 
