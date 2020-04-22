@@ -42,6 +42,32 @@ def numNodes(root):
     return 1 + leftCount + rightCount
     #Without the 1 added, the nodes dont get counted hence output would turn 0
 
+def sumOfAllNodes(root):
+    if root == None:
+        return 0
+    nodeCount = root.data
+    leftSum = sumOfAllNodes(root.left)
+    rightSum = sumOfAllNodes(root.right)
+    return nodeCount + leftSum + rightSum
+
+def largestData(root):
+    if root == None:
+        return -1 #ideally returned -infinity
+    leftLargest = largestData(root.left)
+    rightLargest = largestData(root.right)
+    return max(leftLargest, rightLargest, root.data)
+
+def countNodesGreaterThanX(root,x):
+    if root == None:
+        return 0
+    count = 0
+    if root.data > x:
+        count += 1
+    count = count + countNodesGreaterThanX(root.left,x)
+    count = count + countNodesGreaterThanX(root.right,x)
+    return count
+
 root = treeInput()
 printTreeDetailed(root)
 print(numNodes(root))
+print(largestData(root))
