@@ -23,14 +23,25 @@ def printTreeDetailed(root):
     printTreeDetailed(root.left)
     printTreeDetailed(root.right)
 
+def treeInput(): #Vertical Input
+    rootData = int(input())
+    if rootData == -1:
+        return None
+    root = BinaryTreeNode(rootData)
+    leftTree = treeInput()
+    rightTree = treeInput()
+    root.left = leftTree
+    root.right = rightTree
+    return root
 
-btn1 = BinaryTreeNode(1)
-btn2 = BinaryTreeNode(2)
-btn3 = BinaryTreeNode(3)
-btn4 = BinaryTreeNode(4)
-btn5 = BinaryTreeNode(5)
-btn1.left = btn2
-btn1.right = btn3
-btn2.left = btn4
-btn2.right = btn5
-printTreeDetailed(btn1)
+def numNodes(root):
+    if root == None:
+        return 0
+    leftCount = numNodes(root.left)
+    rightCount = numNodes(root.right)
+    return 1 + leftCount + rightCount
+    #Without the 1 added, the nodes dont get counted hence output would turn 0
+
+root = treeInput()
+printTreeDetailed(root)
+print(numNodes(root))
