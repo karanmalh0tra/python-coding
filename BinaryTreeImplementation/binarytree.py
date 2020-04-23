@@ -67,6 +67,25 @@ def countNodesGreaterThanX(root,x):
     count = count + countNodesGreaterThanX(root.right,x)
     return count
 
+def height(root):
+    if root == None:
+        return 0
+    leftheight = height(root.left)
+    rightheight = height(root.right)
+    if leftheight >= rightheaight:
+        return 1+leftheight
+    else:
+        return 1+rightheight
+
+def numLeafNodes(root):
+    if root == None:
+        return 0
+    if root.left == None and root.right == None:
+        return 1
+    numLeafLeft = numLeafNodes(root.left)
+    numLeafRight = numLeafNodes(root.right)
+    return numLeafLeft + numLeafRight
+
 root = treeInput()
 printTreeDetailed(root)
 print(numNodes(root))
