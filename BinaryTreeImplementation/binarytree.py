@@ -104,6 +104,20 @@ def printDepthKV2(root,k,d=0):
     printDepthKV2(root.left,k,d+1)
     printDepthKV2(root.right,k,d+1)
 
+def removeLeaves(root):
+    if root == None:
+        return None
+    if root.left == None and root.right == None:
+        return None
+    root.left = removeLeaves(root.left)
+    root.right = removeLeaves(root.right)
+    return root
+
+def mirrorBinaryTree(root):
+    if root == None:
+        return None
+    root.left,root.right = mirrorBinaryTree(root.right),mirrorBinaryTree(root.left)
+
 root = treeInput()
 printTreeDetailed(root)
 print(numNodes(root))
