@@ -119,7 +119,79 @@ def mirrorBinaryTree(root):
     root.left,root.right = mirrorBinaryTree(root.right),mirrorBinaryTree(root.left)
     return root
 
-root = treeInput()
+def isBalanced(root): #O(n^2) worst case and O(nlogn) best case.
+#O(n * h) where h is the height.
+    if root == None:
+        return True
+    lh = height(root.left)
+    rh = height(root.right)
+    if lh - rh > 1 or rh - lh > 1:
+        return False
+    isLeftBalanced = isBalanced(root.left)
+    isRightBalanced = isBalanced(root.right)
+    if isLeftBalanced and isRightBalanced:
+        return True
+    else:
+        return False
+
+def getHeightAndCheckBalanced(root):
+    if root == None:
+        return 0, True
+    lh, isLeftBalanced = getHeightAndCheckBalanced(root.left)
+    rh, isRightBalanced = getHeightAndCheckBalanced(root.right)
+
+    h = 1 + max(lh,rh)
+    if lh - rh > 1 or rh - lh > 1:
+        return h, False
+    if isLeftBalanced and isRightBalanced:
+        return h, True
+    else:
+        return h, False
+
+import queue
+def treeInputParralel(): #Use Queue
+    q = queue.Queue()
+    print("Enter root")
+    rootData = int(input())
+    if rootData == -1:
+        return None
+    root =  BinaryTreeNode(rootData)
+    q.put(root)
+    while(not(q.empty())):
+        current_node = q.get()
+        print("Enter left child of: ",current_node.data)
+        leftChildData = int(input())
+        if leftChildData != -1:
+            leftChild = BinaryTreeNode(leftChildData)
+            current_node.left = leftChild
+            q.put(leftChild)
+        print("Enter right child of: ",current_node.data)
+        rightChildData = int(input())
+        if rightChildData != -1:
+            rightChild = BinaryTreeNode(rightChildData)
+            current_node.right = rightChild
+            q.put(rightChild)
+    return root
+
+def printTreeDetailedParallel(root):
+    if root == None:
+        return
+    q = queue.Queue()
+    q.put(root)
+    while(not(q.empty())):
+        current_node = q.get()
+        print(current_node.data,end=":")
+        if current_node.left != None:
+            q.put(current_node.left)
+            print("L:" + str(current_node.left.data),end=",")
+        else:
+            print("L:-1",end=",")
+        if current_node.right != None:
+            q.put(current_node.right)
+            print("R:" + str(current_node.right.data))
+        else:
+            print("R:-1")
+
+root = treeInputParralel()
 printTreeDetailed(root)
-print(numNodes(root))
-print(largestData(root))
+printTreeDetailedParallel(root)
