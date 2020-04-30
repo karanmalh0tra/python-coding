@@ -117,6 +117,7 @@ def mirrorBinaryTree(root):
     if root == None:
         return None
     root.left,root.right = mirrorBinaryTree(root.right),mirrorBinaryTree(root.left)
+    return root
 
 root = treeInput()
 printTreeDetailed(root)
