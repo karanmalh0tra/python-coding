@@ -35,6 +35,28 @@ def takeTreeInput():
         root.children.append(child)
     return root
 
+import queue
+def takeTreeInputLevelWise():
+    q = queue.Queue()
+    print("Enter root")
+    rootData = int(input())
+    #Edge Case
+    if rootData == -1:
+        return None
+    root = treeNode(rootData)
+    q.put(root)
+    while(not(q.empty())):
+        current_node = q.get()
+        print("Enter number of children for ".current_node.data)
+        numChildren = int(input())
+        for i in range(numChildren):
+            print("Enter child for ",current_node.data)
+            childData = int(input())
+            child = TreeNode(childData)
+            current_node.children.append(child)
+            q.put(child)
+
+
 def numNodes(root):
     #Edge Case. Not a base case
     if root == None:
