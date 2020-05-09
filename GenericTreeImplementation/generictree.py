@@ -66,6 +66,16 @@ def numNodes(root):
         count = count + numNodes(child)
     return count
 
+def containsX(tree, x):
+    if tree == None:
+        return None
+    if tree.data == x:
+        return True
+    for child in tree.children:
+        if(containsX(child,x)):
+            return True
+    return False
+
 root = takeTreeInput()
 printTree(root)
 printTreeDetailed(root)
