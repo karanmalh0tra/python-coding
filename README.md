@@ -84,4 +84,33 @@ Other coding questions that utilise stack implementation would also be present i
 
 ### Binary Trees
 
-[Implementation of Binary Trees](https://github.com/karanmalh0tra/python-coding/tree/master/BinaryTreeImplementation) has the code to implement binary trees. Most of the tree problems are to be solved via recursion since a tree always consist of nodes that are trees themselves. 
+[Implementation of Binary Trees](https://github.com/karanmalh0tra/python-coding/tree/master/BinaryTreeImplementation) has the code to implement binary trees. Most of the tree problems are to be solved via recursion since a tree always consist of nodes that are trees themselves.
+
+### Dictionaries and Hash Maps
+Access and Insert should be very fast
+Use List or Array (Bucket Array)
+Key -> Hash Function -> Integer
+Hash Function?
+  1. HashCode => "abc" => hashcode => 10000
+  2. Compression Function(to fit within bucket size) eg. %bucketsize
+# HASHCODES.
+ integer -> hashcode -> same integer
+ string -> Number base p eg. 10^2*a + 10*b + 1*c (p = 10. ideally prime)
+Python has inbuilt hash funtion. hash()
+# Collision Handling
+  1. Closed Hashing(Store in the same index. maintain LL)
+  2. Open Addressing(h.f(a) + f(i))
+# Probing
+linear probing f(i) = i
+Quadratic Probing f(i) = i^2
+Double Hashing f(i) = i * h'(a)
+Note: Seperate Chaining Works Absolutely Fine(easy to implement and understand)
+
+# Load Factor
+Load Factor is the ratio of number of indexes / bucket size.
+Keeping it lesser than 0.7 helps maintain a time complexity of O(1)
+However, as soon as the loadFactor is greater than 0.7:
+  1. Bucket Size is increased by 2x
+  2. Rehashing is done and elements are entered in the new bucket.
+
+[Implementation of Hash Maps](https://github.com/karanmalh0tra/python-coding/tree/master/Dictionaries&HashMaps) has the code to implement hash maps.
