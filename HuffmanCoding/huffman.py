@@ -19,6 +19,7 @@ class HuffmanCoding:
         self.path = path
         self.__heap = []
         self.__codes = {}
+        self.__reverseCodes = {}
 
     def __make_frequency_dictionary(self,text):
         freq_dict = {}
@@ -50,6 +51,7 @@ class HuffmanCoding:
             return
         if root.value is not None:
             self.__codes[root.value] = curr_bits
+            self.__reverseCodes[curr_bits] = root.value
             return
         self.__buildCodesHelper(root.left, curr_bits+"0")
         self.__buildCodesHelper(root.right, curr_bits+"1")
@@ -115,6 +117,43 @@ class HuffmanCoding:
             #return the binary file as an output
         print('Compressed')
         return output_path
+
+    def __removePadding(self,bit_string):
+        padded_info = bit_string[:8]
+        extra_padding = int(padded_info, 2)
+
+        bit_string = bit_string[8:]
+        text_after_padding_removed = bit_string[:-1*extra_padding]
+        return text_after_padding_removed
+
+    def __decodeText(self,actual_text):
+        decoded_text = ""
+        current_bits = ""
+        for bit in actual_text:
+            current_bits += bit
+            if current_bits in self.__reverseCodes:
+                character = self.__reverseCodes[current_bits]
+                decoded_text += character
+                current_bits = ""
+        return decoded_text
+
+    def decompress(self, input_path):
+        filename, file_extesnsion = os.path.splitext(self.path)
+        output_path = filename + "_decompressed" + ".txt"
+        with open(input_path,'rb') as file, open(output_path,'w') as output:
+            bit_string = ""
+            byte = file.read(1)
+            while byte:
+                byte = ord(byte)
+                bits = bin(byte)[2:].rjust(8,'0')
+                bit_string += bits
+                byte = file.read(1)
+            actual_text = self.__removePadding(bit_string)
+            decompressed_string = self.__decodeText(actual_text)
+            output.write(decompressed_string)
+            print("Decompressed")
+        return
 path = "C:/Users/Karan/Desktop/huffmantest.txt"
 h = HuffmanCoding(path)
 output_path = h.compress()
+h.decompress(output_path)
