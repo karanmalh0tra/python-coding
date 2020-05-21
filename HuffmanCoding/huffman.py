@@ -1,7 +1,7 @@
 import heapq
-
+import os
 class BinaryTreeNode:
-    def __init(self, value, freq):
+    def __init__(self, value, freq):
         self.value = value
         self.freq = freq
         self.left = None
@@ -42,7 +42,7 @@ class HuffmanCoding:
             newNode = BinaryTreeNode(None,freq_sum)
             newNode.left = binary_tree_node_1
             newNode.right = binary_tree_node_2
-            heapq.push(self.__heap, newNode)
+            heapq.heappush(self.__heap, newNode)
         return
 
     def __buildCodesHelper(self,root,curr_bits):
@@ -58,33 +58,63 @@ class HuffmanCoding:
         root = heapq.heappop(self.__heap)
         self.__buildCodesHelper(root,"")
 
-    def __getEncodedText(text):
+    def __getEncodedText(self,text):
         encoded_text = ""
         for char in text:
             encoded_text += self.__codes[char]
         return encoded_text
 
+    def __getPaddedEncodedText(self,encoded_text):
+        padded_amount = 8 - (len(encoded_text) % 8)
+        for i in range(padded_amount):
+            encoded_text += "0"
+        padded_info = "{0:08b}".format(padded_amount)
+        padded_encoded_text = padded_info + encoded_text
+        return padded_encoded_text
+
+    def __getBytesArray(self,padded_encoded_text):
+        array = []
+        for i in range(0,len(padded_encoded_text),8):
+            byte = padded_encoded_text[i:i+8]
+            array.append(int(byte,2))
+        return array
+
     def compress(self):
         #get file from path
+        file_name, file_extension = os.path.splitext(self.path)
+        output_path = file_name + ".bin"
         #read text from file
-        text = "Hi My Name is Karan Malhotra. I am Learning Python DS and Algo"
+        with open(self.path, 'r+') as file, open(output_path, 'wb') as output:
+            text = file.read()
+            text = text.rstrip()
 
-        #make frequency dictionary using the text
-        freq_dict = self.__make_frequency_dictionary(text)
+            #make frequency dictionary using the text
+            freq_dict = self.__make_frequency_dictionary(text)
 
-        #Construct the heap from the frequency_dictionary
-        self.__buildHeap(freq_dict)
+            #Construct the heap from the frequency_dictionary
+            self.__buildHeap(freq_dict)
 
-        #Construct the Binary Tree from the heap
-        self.__buildTree()
+            #Construct the Binary Tree from the heap
+            self.__buildTree()
 
-        #Contruct the codes from binary tree
-        self.__buildCodes()
+            #Contruct the codes from binary tree
+            self.__buildCodes()
 
-        #Create the encoded texts using the codes
-        encoded_text = self.__getEncodedText(text)
+            #Create the encoded texts using the codes
+            encoded_text = self.__getEncodedText(text)
 
-        #put this encoded text in a binary file
+            #pad this encoded text
+            padded_encoded_text = self.__getPaddedEncodedText(encoded_text)
+            #Convert padded encoded text to bytes
+            bytes_array = self.__getBytesArray(padded_encoded_text)
+            final_bytes = bytes(bytes_array)
 
+            #put this encoded text in a binary file
+            output.write(final_bytes)
 
-        #return the binary file as an output
+            #return the binary file as an output
+        print('Compressed')
+        return output_path
+path = "C:/Users/Karan/Desktop/huffmantest.txt"
+h = HuffmanCoding(path)
+output_path = h.compress()
