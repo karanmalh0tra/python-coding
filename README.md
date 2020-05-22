@@ -93,20 +93,20 @@ Key -> Hash Function -> Integer
 Hash Function?
   1. HashCode => "abc" => hashcode => 10000
   2. Compression Function(to fit within bucket size) eg. %bucketsize
-# HASHCODES.
+#### HASHCODES.
  integer -> hashcode -> same integer
  string -> Number base p eg. 10^2*a + 10*b + 1*c (p = 10. ideally prime)
 Python has inbuilt hash funtion. hash()
-# Collision Handling
+##### Collision Handling
   1. Closed Hashing(Store in the same index. maintain LL)
   2. Open Addressing(h.f(a) + f(i))
-# Probing
+##### Probing
 linear probing f(i) = i
 Quadratic Probing f(i) = i^2
 Double Hashing f(i) = i * h'(a)
 Note: Seperate Chaining Works Absolutely Fine(easy to implement and understand)
 
-# Load Factor
+#### Load Factor
 Load Factor is the ratio of number of indexes / bucket size.
 Keeping it lesser than 0.7 helps maintain a time complexity of O(1)
 However, as soon as the loadFactor is greater than 0.7:
@@ -114,3 +114,23 @@ However, as soon as the loadFactor is greater than 0.7:
   2. Rehashing is done and elements are entered in the new bucket.
 
 [Implementation of Hash Maps](https://github.com/karanmalh0tra/python-coding/tree/master/Dictionaries&HashMaps) has the code to implement hash maps.
+
+
+### Huffman Coding
+
+Huffman coding utilises various data structures and is thus a good problem to solve while learning about data structures and algorithms.
+I utilised lists, Binary Trees, Min Heap to implement huffman coding.
+If you wish to use the same, ensure to change the filepath in the code to the file you want to use the script with.
+
+How Huffman Compression works?
+  1. Read Text from the File
+  2. Make a dictionary with characters and its frequency
+  3. Construct a Min Heap with the help of the dictionary. Utilise Binary Trees here.
+  4. Construct a Binary Tree from the Min Heap.
+  5. Construct the codes dictionary from the binary tree made above. (also prepare a reverse code dictionar from decompression)
+  6. Create encoded texts using the codes dictionary.
+  7. Have a padding to these encoded texts.
+  8. Convert the padded text to bytes.
+  9. Write the bytes to a ".bin" extension file.
+
+[Huffman Coding](https://github.com/karanmalh0tra/python-coding/tree/master/HuffmanCoding) has the implementation of huffman coding algorithm.
