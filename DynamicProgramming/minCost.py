@@ -39,12 +39,26 @@ def minCostMemoization(cost,i,j,m,n,dp):
     my_cost = cost[i][j] + min(ans1,ans2,ans3)
     return my_cost
 
+def minCostIterative(cost,m,n): #Dynamic Programming
+    dp = [[sys.maxsize for j in range(n+1)] for i in range(m+1)]
+    for i in range(m-1,-1,-1):
+        for j in range(n-1,-1,-1):
+            if i == m-1 and j == n-1:
+                dp[i][j] = cost[i][j]
+            else:
+                ans1 = dp[i][j+1]
+                ans2 = dp[i+1][j]
+                ans3 = dp[i+1][j+1]
+                dp[i][j] = cost[i][j]+ min(ans1,ans2,ans3)
+    return dp[0][0]
+
 cost = [[1,5,11],[8,13,12],[2,3,7],[15,16,18]]
 m = 4
 n = 3
-dp = [[sys.maxsize for j in range(n+1)] for i in range(m+1)]
+#dp = [[sys.maxsize for j in range(n+1)] for i in range(m+1)]
 #ans = minCostRecursive(cost,0,0,4,3)
-ans = minCostMemoization(cost,0,0,4,3,dp)
+#ans = minCostMemoization(cost,0,0,m,n,dp)
+ans = minCostIterative(cost,m,n)
 print(ans)
 
 #   1   5   11
