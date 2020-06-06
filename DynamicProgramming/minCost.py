@@ -52,7 +52,7 @@ def minCostIterative(cost,m,n): #Dynamic Programming Bottom Up Approach
                 dp[i][j] = cost[i][j]+ min(ans1,ans2,ans3)
     return dp[0][0]
 
-def minCostIterativeTD(cost,m,n): #Dynamic Programming Bottom Up Approach
+def minCostIterativeTD(cost,m,n): #Dynamic Programming Top Down Approach
     dp = [[sys.maxsize for j in range(n+1)] for i in range(m+1)]
     for i in range(1,m+1):
         for j in range(1,n+1):

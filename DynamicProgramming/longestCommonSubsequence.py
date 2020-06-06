@@ -37,11 +37,23 @@ def lcsMemoization(str1,str2,i,j,dp):
         ans = max(ans1,ans2)
     return ans
 
+def lcsDP(str1,str2):
+    m = len(str1)
+    n = len(str2)
+    dp =[[0 for j in range(n+1)] for i in range(m+1)]
+    for i in range(m-1,-1,-1):
+        for j in range(n-1,-1,-1):
+            if str1[i] == str2[j]:
+                dp[i][j] = 1 + dp[i+1][j+1]
+            else:
+                dp[i][j] = max(dp[i+1][j], dp[i][j+1])
+    return dp[0][0]
 
 str1 = "abedgjc"
 str2 = "bmdgsc"
-m = len(str1)
-n = len(str2)
-dp = [[-1 for j in range(n+1)] for i in range(m+1)]
-ans = lcsMemoization(str1,str2,0,0,dp)
+# m = len(str1)
+# n = len(str2)
+# dp = [[-1 for j in range(n+1)] for i in range(m+1)]
+# ans = lcsMemoization(str1,str2,0,0,dp)
+ans = lcsDP(str1, str2)
 print(ans)
