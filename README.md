@@ -134,3 +134,26 @@ How Huffman Compression works?
   9. Write the bytes to a ".bin" extension file.
 
 [Huffman Coding](https://github.com/karanmalh0tra/python-coding/tree/master/HuffmanCoding) has the implementation of huffman coding algorithm.
+
+
+### Graphs
+
+Graphs  have vertices and edge
+v1 ------edge---- v2
+Degree => Edges going through a vertex
+Path => traversal is possible via edges and vertices.
+Connected Graph => if theres a path between any two vertices
+Connected Component(Sub-graph) => Disconnected graph can have connected components
+
+Tree is a connected graph with no cycle.
+
+Minimum Edges in a Graph = 0
+Minimum Edges in a Connected Graph for n vertices = n-1
+Minimum Edges in a Connected Graph for n vertices = (n*(n-1))/2
+
+Graph Implementation
+
+Adjacency Matrix (if more number of vertices)
+ - maintain only vertices array
+ - Space Complexity O(n^2) [ n * n matrix]
+ - check if edge is there or not O(1) adj[v1][v2]
